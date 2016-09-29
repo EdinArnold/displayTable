@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Bazinga</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+
+  <div id="header" ng-controller="HeaderCtrl">
+    <span>{{appDetails.title}}</span>
+    <!-- <p>{{appDetails.tagline}}</p> -->
+  </div>
+
+  <div id="report" ng-controller="TableDataCtrl">
+    <div class="table"  >
+      <table border="1">
+        <tr>
+          <td>Order</td>
+          <td>Guest</td>
+        </tr>
+        <tr ng-repeat="rowdata in tabledata">
+          <td>{{rowdata.order}}</td>
+          <td>{{rowdata.guest}}</td>
+        </td>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>
